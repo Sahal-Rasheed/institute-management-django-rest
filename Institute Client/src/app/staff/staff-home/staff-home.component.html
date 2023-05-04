@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center text-center">
+            <h1 class="font-weight-normal mt-2">"A great instructor is someone who has not only mastered the subject but
+                also possesses excellent communication and interpersonal skills."</h1>
+        </div>
+        <div class="col-md-6">
+            <img src="../../../assets/images/5.png" class="img-fluid">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <div class="logo d-flex justify-content-center align-items-center bg-primary">
+                        <img src="../../../assets/images/teacher.svg" alt="">
+                    </div>
+                    <h1 class="card-title font-weight-bolder">{{context.staff_no}}</h1>
+                    <h6 class="card-text font-weight-bold">Skillful Instructors</h6>
+                    <p class="card-text font-weight-light">Start learning from experienced instructors now.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <div class="logo d-flex justify-content-center align-items-center bg-info">
+                        <img src="../../../assets/images/student.svg" alt="">
+                    </div>
+                    <h1 class="card-title font-weight-bolder">{{context.student_no}}</h1>
+                    <h6 class="card-text font-weight-bold">Happy Students</h6>
+                    <p class="card-text font-weight-light">Enrolled in our courses and improved their skills.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <div class="logo d-flex justify-content-center align-items-center bg-danger">
+                        <img src="../../../assets/images/course.svg" alt="">
+                    </div>
+                    <h1 class="card-title font-weight-bolder">{{context.course_no}}</h1>
+                    <h6 class="card-text font-weight-bold">Courses</h6>
+                    <p class="card-text font-weight-light">Learn without any geographical & time limitations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-4 mb-4 pt-4">
+            <h2 class="font-weight-normal">Your Class</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="card shadow mb-4">
+                <div>
+                    <span class="badge badge-danger ml-4 mt-4">Your Batch</span>
+                    <img class="card-img-top" src="../../../assets/images/6.png" alt="Card image cap">
+                </div>
+                <hr>
+                <div class="card-body">
+                    <h5 class="card-title mb-2">{{data.staff_batch}}</h5>
+                    <p>Click below to know your batch details.</p>
+                    <a routerLink="my-class" class="btn btn-outline-dark">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

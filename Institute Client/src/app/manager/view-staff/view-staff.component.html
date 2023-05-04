@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="card mt-4 mb-4">
+            <img class="card-img-top" *ngIf="!staff.profile_pic" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" height="500" width="500">
+            <img class="card-img-top" *ngIf="staff.profile_pic" src="http://127.0.0.1:8000{{staff.profile_pic}}" alt="Card image cap" height="500" width="500">
+            <div class="card-body">
+              <h5 class="card-title">{{staff.user}}</h5>
+              <p class="card-text">Role - {{staff.role}}</p>
+              <p class="card-text">Qualification - {{staff.qualification}}</p>
+              <p class="card-text">Phone Number - {{staff.phone_number}}</p>
+              <form action="" [formGroup]="assignBatchForm" (submit)="batchSubmit()">
+                <label>Select Batch -</label>
+                <select name="batch" class="form-control" formControlName="batch">
+                    <option value="" selected>Batches</option>
+                    <option value="{{i.id}}" *ngFor="let i of batches">{{i.batch_name}}</option>
+                </select>
+                <button type="submit" class="btn btn-primary mt-3">Add to Batch</button>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>

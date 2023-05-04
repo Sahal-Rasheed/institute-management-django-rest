@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-between mt-3">
+      <div class="col-sm-6">
+        <h2 class="font-weight-light">OUR COURSES :</h2>
+      </div>
+      <div class="col-sm-6 text-right">
+        <button class="btn btn-outline-dark" (click)="addCourse()" *ngIf="user == 'Admin'">Add Course</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mt-2 mb-2" *ngFor="let i of courses">
+        <div class="card shadow">
+          <img class="card-img-top" src="{{i.course_pic}}" alt="Card image cap">
+          <h5 class="card-title ml-3">{{i.course_name}}</h5>  
+          <div class="card-body">
+            <p class="card-text">Course Fee: {{i.fees | currency: "INR"}}</p>
+            <p class="card-text">Duration: {{i.duration}} Months</p>
+            <button class="btn btn-outline-dark btn-block" id="{{i.id}}" (click)="viewCourse($event)">View Course</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+</div>
+  

@@ -1,0 +1,42 @@
+
+<div class="container">
+    <div class="d-flex justify-content-between mt-3">
+        <h2 class="font-weight-light">ASSIGNMENT SUBMMISSIONS :</h2>     
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mt-4">
+                <h4 class="card-header font-weight-bolder" style="background-color: bisque;">Details</h4>
+                <div class="card-body">
+                  <!-- <h5 class="card-title font-weight-normal mb-4">Instructor : {{batch_teacher}}</h5> -->
+                    <table class="table table-striped table-border table-bordered">
+                        <thead>
+                        <tr class="table-secondary text-center">
+                            <th scope="col">#</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col">File</th>
+                            <th scope="col">Submission Date</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let i of assignments;  let num = index" class="text-center" style="background-color:aliceblue;">
+                            <th scope="row" class="pt-3" style="width: 200px;">{{num+1}}</th>
+                            <td class="pt-3" style="width: 200px;">{{i.student}}</td>
+                            <td class="pt-3" style="width: 200px;">{{i.assignment}}</td>
+                            <td class="pt-3" style="width: 200px;"><a href="http://127.0.0.1:8000{{i.submission_file}}" target="_blank">View File</a></td>
+                            <td class="pt-3" style="width: 200px;">{{i.submitted_at}}</td>
+                            <td class="pt-3" style="width: 200px;" *ngIf="i.approved"><p class="text-success">Approved</p></td>
+                            <td class="pt-3" style="width: 200px;" *ngIf="!i.approved"><button class="btn btn-outline-success" id="{{i.id}}" (click)="approve($event)">Approve</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </div>
+</div>

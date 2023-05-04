@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="d-flex justify-content-between mt-3">
+        <h2 class="font-weight-light">OUR BATCHES :</h2>     
+        <button class="btn btn-outline-dark" (click)="addBatch()"> Add New Batch </button>
+    </div>
+    <div class="row">
+        <div class="col-6"  *ngFor="let i of batches">
+            <div class="card mt-4 mb-2">
+                <h4 class="card-header font-weight-bolder" style="background-color: azure;">{{i.batch_name}}</h4>
+                <div class="card-body">
+                  <h5 class="card-title">{{i.course}}</h5>
+                  <p class="card-text font-weight-normal">Start Data : {{i.start_date}}</p>
+                  <p class="card-text font-weight-normal">End Date : {{i.end_date}}</p>
+                  <button class="btn btn-outline-dark" id="{{i.id}}" (click)="viewBatch($event)">View</button>
+                  <button class="btn btn-outline-danger ml-3" id="{{i.id}}" (click)="delBatch($event)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

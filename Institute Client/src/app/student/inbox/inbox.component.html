@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="col-12">
+        <h2 class="font-weight-light mt-3 mb-1">YOUR INBOX :</h2>     
+        <div class="wrap">
+            <div class="alert alert-light d-flex justify-content-between mt-4 pt-4 border shadow" role="alert" *ngFor="let i of messages">
+                <p class="font-weight-bolder text-dark"><i class="fa fa-user-circle-o mr-3" aria-hidden="true"></i> {{i.text}}</p>
+                {{i.date_created}}
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="alert alert-light d-flex justify-content-between mt-4 pt-4 border shadow" role="alert" *ngFor="let i of msg">
+                <p class="font-weight-bolder text-dark"><i class="fa fa-user-circle-o mr-3" aria-hidden="true"></i> {{i.text}}</p>
+                {{i.date_created}}
+            </div>
+        </div>
+    </div>
+</div>

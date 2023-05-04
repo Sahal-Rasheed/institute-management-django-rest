@@ -1,0 +1,19 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .card {
+    overflow-x: auto; /* Make the card horizontally scrollable */
+  }
+  
+  table {
+    width: 100%; /* Set the table width to 100% */
+    min-width: 300px; /* Set a minimum width to prevent the table from becoming too narrow on small screens */
+  }
+  
+  td, th {
+    padding: 8px; /* Add some padding to the table cells */
+  }
+  

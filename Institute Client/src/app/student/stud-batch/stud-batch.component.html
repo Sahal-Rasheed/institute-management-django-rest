@@ -1,0 +1,70 @@
+<!-- <div class="container">
+    <div class="text-center justify-content-center mt-4 pt-4">
+        <h2 class="font-weight-normal" >No Students Added Yet</h2>
+    </div>
+</div> -->
+<div class="container">
+    <div class="d-flex justify-content-between mt-3">
+        <h2 class="font-weight-light">BATCH DETAILS :</h2>     
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card mt-4">
+                <h4 class="card-header font-weight-bolder" style="background-color: bisque;">{{batch_data['0']['batch']}}</h4>
+                <div class="card-body">
+                  <h5 class="card-title font-weight-normal mb-4">Instructor : {{batch_teacher}}</h5>
+                    <table class="table table-striped table-border table-bordered">
+                        <thead>
+                        <tr class="table-secondary text-center">
+                            <th scope="col">#</th>
+                            <th scope="col">Student Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let i of batch_data;  let num = index" class="text-center" style="background-color:aliceblue;">
+                            <th scope="row" class="pt-3" style="width: 200px;">{{num+1}}</th>
+                            <td class="pt-3" style="width: 200px;">{{i.student}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card mt-4">
+                <h4 class="card-header font-weight-bolder" style="background-color: bisque;">Assignments</h4>
+                    <div class="container">
+                        <br> 
+                        <ul class="list-group list-group-flush mb-4" *ngFor="let i of assignments">
+                            <li  class="list-group-item pb-1 mt-1 mb-1 border d-flex justify-content-between font-weight-bolder" style="background-color:aliceblue;">{{i.topic}}
+                                <!-- <p class="text-success">Submitted</p>  -->
+                                <button class="btn btn-outline-dark mb-2 aid" id="{{i.id}}" (click)="assignmentSubmit($event)" >Submit Assignment</button>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+    <div class="col-12">
+        <div class="card mt-4">
+            <h4 class="card-header font-weight-bolder" style="background-color: bisque;">Recorded Class</h4>
+            <div class="container">
+                <div class="row mt-4" *ngFor="let j of videos">
+                  <div class="col-md-6">
+                    <video width="100%" height="auto" controls>
+                      <source src="http://127.0.0.1:8000{{j.video}}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="col-md-6 d-flex">
+                    <h5 class="align-self-center">{{batch_data['0']['batch']}} | {{j.date_created}} | {{batch_teacher}}</h5>
+                  </div>
+                </div>
+              </div>                         
+            <hr>
+        </div>
+    </div>
+
+    </div>
+</div>

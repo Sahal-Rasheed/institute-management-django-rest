@@ -1,0 +1,56 @@
+<section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-sm-center h-100">
+            <div class="col-xxl-4 col-xl-7 col-lg-5 col-md-7 col-sm-9">
+                <div class="text-center my-4">
+                    <!-- <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100"> -->
+                </div>
+                <div class="card shadow-lg">
+                    <div class="card-body pl-5 pr-5 pt-4 pb-4">
+                        <h1 class="fs-4 card-title fw-bold mb-4">Add Course</h1>
+                        <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">Course Name</label>
+                                <input formControlName="course_name" id="cname" type="text" class="form-control" name="cname" value="" placeholder="Course Name" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">Course Description</label>
+                                <input formControlName="description" id="cdesc" type="text" class="form-control" name="cdesc" value="" placeholder="Course Description" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">Course Image</label> <br>
+                                <input type="file" name="course_pic" formControlName="course_pic" (change)="onFileChange($event)">
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">Fee</label>
+                                <input formControlName="fees" id="fees" type="text" class="form-control" name="fees" value="" placeholder="Course Fee" required>
+                                <div *ngIf="courseForm.get('fees')?.errors && courseForm.get('fees')?.touched" class="alert alert-danger mt-2">
+                                    Course price must be in number 
+                                </div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="email">Duration</label>
+                                <input formControlName="duration" id="duration" type="text" class="form-control" name="duration" value="" placeholder="Course Duration" required>
+                                <div *ngIf="courseForm.get('duration')?.errors && courseForm.get('duration')?.touched" class="alert alert-danger mt-2">
+                                    Course duration must be in number
+                                </div>
+                            </div>
+
+                            <div class="align-items-center d-flex">
+                                <button type="submit" class="btn btn-primary ms-auto mt-3">
+                                    Add	
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

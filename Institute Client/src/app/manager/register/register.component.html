@@ -1,0 +1,63 @@
+<section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-sm-center h-100">
+            <div class="col-xxl-4 col-xl-7 col-lg-5 col-md-7 col-sm-9">
+                <div class="text-center my-4">
+                    <!-- <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100"> -->
+                </div>
+                <div class="card shadow-lg">
+                    <div class="card-body pl-5 pr-5 pt-4 pb-4">
+                        <h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
+                        <form [formGroup]="registerForm" (ngSubmit)="register()">
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">First Name</label>
+                                <input formControlName="first_name" id="fname" type="text" class="form-control" name="fname" value="" placeholder="First Name" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">Last Name</label>
+                                <input formControlName="last_name" id="lname" type="text" class="form-control" name="lname" value="" placeholder="Last Name" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">Username</label>
+                                <input formControlName="username" id="username" type="text" class="form-control" name="username" value="" placeholder="Username" required>
+                                <div *ngIf="registerForm.get('username')?.errors && registerForm.get('username')?.touched" class="alert alert-danger mt-2">
+                                    Invalid Username
+                                </div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="email">E-Mail</label>
+                                <input formControlName="email" id="email" type="email" class="form-control" name="email" value="" placeholder="Email" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="mb-2 text-muted" for="name">User Type</label>
+                                <select formControlName="user_type" name="user_type" class="form-control">
+                                    <option value="student" selected>Student</option>
+                                    <option value="staff">Staff</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="mb-2 text-muted" for="password">Password</label>
+                                <input formControlName="password" id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+                                <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched" class="alert alert-danger mt-2">
+                                    Invalid Password
+                                </div>
+                            </div>
+
+                            <div class="align-items-center d-flex">
+                                <button type="submit" class="btn btn-primary ms-auto">
+                                    Register	
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

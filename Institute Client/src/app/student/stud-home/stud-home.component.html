@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-5 d-flex justify-content-center align-items-center text-center">
+        <h1 class="font-weight-normal mt-2">Unlock your coding potential with us. <br>
+          We offer a range of resources and tools to help you build your coding skills.</h1>
+      </div>
+      <div class="col-md-7">
+        <img src="../../../assets/images/3.png" class="img-fluid" alt="">
+      </div>
+    </div>
+    <div class="card-container row mt-4">
+      <div class="col-md-4  mb-3  col-sm-12">
+        <div class="card text-center shadow">
+          <div class="card-body">
+            <div class="logo d-flex justify-content-center align-items-center bg-primary">
+              <img src="../../../assets/images/teacher.svg" alt="">
+            </div>
+            <h1 class="card-title font-weight-bolder">{{context.staff_no}}</h1>
+            <h6 class="card-text font-weight-bold">Skillful Instructors</h6>
+            <p class="card-text font-weight-light">Start learning from experienced instructors now.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-3">
+        <div class="card text-center shadow">
+          <div class="card-body">
+            <div class="logo d-flex justify-content-center align-items-center bg-info">
+              <img src="../../../assets/images/student.svg" alt="">
+            </div>
+            <h1 class="card-title font-weight-bolder">{{context.student_no}}</h1>
+            <h6 class="card-text font-weight-bold">Happy Students</h6>
+            <p class="card-text font-weight-light">Enrolled in our courses and improved their skills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-3">
+        <div class="card text-center shadow">
+          <div class="card-body">
+            <div class="logo d-flex justify-content-center align-items-center bg-danger">
+              <img src="../../../assets/images/course.svg" alt="">
+            </div>
+            <h1 class="card-title font-weight-bolder">{{context.course_no}}</h1>
+            <h6 class="card-text font-weight-bold">Courses</h6>
+            <p class="card-text font-weight-light">Learn without any geographical & time limitations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 mb-4 pt-4">
+      <h2 class="font-weight-normal">Course & Batch Details</h2>
+    </div>
+    <div class="cc row">
+      <div class="col-md-6 mb-3">
+        <div class="card shadow mb-2">
+          <div>
+            <span class="badge badge-danger ml-4 mt-4">Enrolled</span>
+            <img class="card-img-top" src="http://127.0.0.1:8000{{course.course_pic}}" alt="Card image cap" height="460"
+              width="10">
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">{{course.course_name}}</h5>
+                  <!-- <p class="card-text">Course Fee : {{course.fees | currency: "INR"}}</p> -->
+                  <p class="card-text">Duration : {{course.duration}} Months</p>
+                  <a routerLink="/student/view-course/{{course.id}}" class="btn btn-outline-dark">View</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-6">
+            <div class="card shadow mb-4">
+                <div>   
+                    <span class="badge badge-danger ml-4 mt-4">Your Batch</span> 
+                    <img class="card-img-top" src="../../../assets/images/4.png" alt="Card image cap" height="460" width="100%">
+                </div>
+                <hr>
+                <div class="card-body">
+                  <h5 class="card-title mb-2">{{data.student_batch}}</h5>
+                  <p>Click below to know your batch details.</p>
+                  <!-- <p class="card-text">Course Fee : {{course.fees | currency: "INR"}}</p> -->
+                  <!-- <p class="card-text">Duration : {{course.duration}} Months</p> --> <br>
+                  <a routerLink="my-batch" class="btn btn-outline-dark">View</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

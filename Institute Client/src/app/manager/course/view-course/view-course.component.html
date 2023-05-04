@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="card mt-4 mb-4">
+        <img class="card-img-top" src="{{course.course_pic}}" height="470px" width="150px">
+        <div class="card-body">
+          <h4 class="card-title">{{course.course_name}}</h4>
+          <p class="card-text">{{course.description}}</p>
+          <p class="card-text"><strong> Course Fee : </strong> {{course.fees | currency: "INR"}}</p>
+          <p class="card-text"><strong> Duration : </strong> {{course.duration}} Months</p>
+        </div>
+    </div>
+</div>
+
+

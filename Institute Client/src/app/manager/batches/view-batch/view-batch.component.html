@@ -1,0 +1,41 @@
+<div class="container" *ngIf="error">
+    <div class="text-center justify-content-center mt-4 pt-4">
+        <h2 class="font-weight-normal" >No Students Added Yet</h2>
+    </div>
+</div>
+<div class="container" *ngIf="!error">
+    <div class="d-flex justify-content-between mt-3">
+        <h2 class="font-weight-light">BATCH DETAILS :</h2>     
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card mt-4">
+                <h4 class="card-header font-weight-bolder" style="background-color: bisque;">{{course}}</h4>
+                <div class="card-body">
+                  <h5 class="card-title font-weight-normal mb-4">Instructor : {{teacher}}</h5>
+                    <table class="table table-striped table-border table-bordered">
+                        <thead>
+                        <tr class="table-secondary text-center">
+                            <th scope="col">#</th>
+                            <th scope="col">Profile</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Qualification</th>
+                            <th scope="col">D.O.B</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let student of students;let num = index" class="text-center" style="background-color:aliceblue;">
+                            <th scope="row" class="pt-3" style="width: 200px;">{{num+1}}</th>
+                            <td *ngIf="!student.profile_pic" style="width: 200px;"><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="rounded-circle ml-2" height="20%" width="20%"></td>
+                            <td *ngIf="student.profile_pic" ><img src="http://127.0.0.1:8000{{ student.profile_pic }}" class="rounded-circle ml-2" height="20%" width="20%"></td>
+                            <td class="pt-3 pl-4">{{student.user}}</td> 
+                            <td class="pt-3">{{student.qualification}}</td>
+                            <td class="pt-3">{{student.dob}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
