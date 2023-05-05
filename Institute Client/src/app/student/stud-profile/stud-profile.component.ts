@@ -18,6 +18,7 @@ export class StudProfileComponent implements OnInit{
   }
 
   getData(profile:any) {
+    console.log(profile)
     this.profile = profile
   }
 }

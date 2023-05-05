@@ -25,7 +25,7 @@
                             <th scope="row" class="pt-3" style="width: 200px;">{{num+1}}</th>
                             <td class="pt-3" style="width: 200px;">{{i.student}}</td>
                             <td class="pt-3" style="width: 200px;">{{i.assignment}}</td>
-                            <td class="pt-3" style="width: 200px;"><a href="https://institutemanagement.onrender.com{{i.submission_file}}" target="_blank">View File</a></td>
+                            <td class="pt-3" style="width: 200px;"><a href="{{i.submission_file}}" target="_blank">View File</a></td>
                             <td class="pt-3" style="width: 200px;">{{i.submitted_at}}</td>
                             <td class="pt-3" style="width: 200px;" *ngIf="i.approved"><p class="text-success">Approved</p></td>
                             <td class="pt-3" style="width: 200px;" *ngIf="!i.approved"><button class="btn btn-outline-success" id="{{i.id}}" (click)="approve($event)">Approve</button></td>

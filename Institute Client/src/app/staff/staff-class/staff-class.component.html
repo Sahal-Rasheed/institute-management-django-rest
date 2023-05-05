@@ -63,7 +63,7 @@
                     <div class="row mt-4" *ngFor="let j of videos">
                       <div class="col-md-6">
                         <video width="100%" height="auto" controls>
-                          <source src="https://institutemanagement.onrender.com{{j.video}}" type="video/mp4">
+                          <source src="{{j.video}}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
                       </div>
