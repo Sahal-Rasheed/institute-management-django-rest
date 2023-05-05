@@ -9,7 +9,7 @@ export class ManagerService {
 
   registerUser(data:any){
     
-    return fetch('http://127.0.0.1:8000/register/', {
+    return fetch('https://institutemanagement.onrender.com/register/', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -21,7 +21,7 @@ export class ManagerService {
 
   getStudents(){
     
-    return fetch('http://127.0.0.1:8000/students/', {
+    return fetch('https://institutemanagement.onrender.com/students/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -32,7 +32,7 @@ export class ManagerService {
 
   getStaffs(){
     
-    return fetch('http://127.0.0.1:8000/staffs/', {
+    return fetch('https://institutemanagement.onrender.com/staffs/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -43,7 +43,7 @@ export class ManagerService {
 
   getCourses(){
     
-    return fetch('http://127.0.0.1:8000/courses/', {
+    return fetch('https://institutemanagement.onrender.com/courses/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -54,7 +54,7 @@ export class ManagerService {
 
   viewCourse(id:any){
     
-    return fetch(`http://127.0.0.1:8000/courses/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/courses/${id}/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -72,7 +72,7 @@ export class ManagerService {
   //   formData.append('fees', data.fees);
   //   formData.append('duration', data.duration);
   
-  //   return fetch('http://127.0.0.1:8000/courses/', {
+  //   return fetch('https://institutemanagement.onrender.com/courses/', {
   //     method: 'POST',
   //     body: formData,
   //     headers: {
@@ -84,7 +84,7 @@ export class ManagerService {
 
   addCourse(formData: FormData) {
     
-    return fetch('http://127.0.0.1:8000/courses/', {
+    return fetch('https://institutemanagement.onrender.com/courses/', {
       method: 'POST',
       body: formData,
       headers: {
@@ -95,7 +95,7 @@ export class ManagerService {
 
   viewStudent(id:any){
     
-    return fetch(`http://127.0.0.1:8000/students/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/students/${id}/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -106,7 +106,7 @@ export class ManagerService {
 
   deleteStudent(id:any){
     
-    return fetch(`http://127.0.0.1:8000/students/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/students/${id}/`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -117,7 +117,7 @@ export class ManagerService {
  
   assignCourse(data:any,id:any){
     
-    return fetch(`http://127.0.0.1:8000/students/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/students/${id}/`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
@@ -129,7 +129,7 @@ export class ManagerService {
 
   viewStaff(id:any){
     
-    return fetch(`http://127.0.0.1:8000/staffs/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/staffs/${id}/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -140,7 +140,7 @@ export class ManagerService {
 
   deleteStaff(id:any){
     
-    return fetch(`http://127.0.0.1:8000/staffs/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/staffs/${id}/`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -151,7 +151,7 @@ export class ManagerService {
 
   getBatches(){
     
-    return fetch('http://127.0.0.1:8000/batches/', {
+    return fetch('https://institutemanagement.onrender.com/batches/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -162,7 +162,7 @@ export class ManagerService {
 
   addBatch(data:any){
     
-    return fetch('http://127.0.0.1:8000/batches/', {
+    return fetch('https://institutemanagement.onrender.com/batches/', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -174,7 +174,7 @@ export class ManagerService {
 
   viewBatch(id:any){
     
-    return fetch(`http://127.0.0.1:8000/student_batch/${id}`, {
+    return fetch(`https://institutemanagement.onrender.com/student_batch/${id}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -185,7 +185,7 @@ export class ManagerService {
 
   assignBatch(u_id:any,b_id:any){
     
-    return fetch(`http://127.0.0.1:8000/student_batch/${u_id}/create_student_batch?batch=${b_id}`, {
+    return fetch(`https://institutemanagement.onrender.com/student_batch/${u_id}/create_student_batch?batch=${b_id}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -196,7 +196,7 @@ export class ManagerService {
 
   assignStaffBatch(u_id:any,b_id:any){
     
-    return fetch(`http://127.0.0.1:8000/staff_batch/${u_id}/create_staff_batch?batch=${b_id}`, {
+    return fetch(`https://institutemanagement.onrender.com/staff_batch/${u_id}/create_staff_batch?batch=${b_id}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -209,7 +209,7 @@ export class ManagerService {
 
     console.log(data)
     
-    return fetch(`http://127.0.0.1:8000/add_announcement/${id}`, {
+    return fetch(`https://institutemanagement.onrender.com/add_announcement/${id}`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -221,7 +221,7 @@ export class ManagerService {
 
   deleteBatch(id:any){
     
-    return fetch(`http://127.0.0.1:8000/batches/${id}/`, {
+    return fetch(`https://institutemanagement.onrender.com/batches/${id}/`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

@@ -9,7 +9,7 @@ export class StaffService {
 
   staffIndex(){
     
-    return fetch('http://127.0.0.1:8000/staff_index/', {
+    return fetch('https://institutemanagement.onrender.com/staff_index/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -20,7 +20,7 @@ export class StaffService {
 
  myClass(){
     
-    return fetch('http://127.0.0.1:8000/my_class/', {
+    return fetch('https://institutemanagement.onrender.com/my_class/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -31,7 +31,7 @@ export class StaffService {
 
   addProfile(formData: FormData) {
     
-    return fetch('http://127.0.0.1:8000/staff_index/', {
+    return fetch('https://institutemanagement.onrender.com/staff_index/', {
       method: 'PUT',
       body: formData,
       headers: {
@@ -42,7 +42,7 @@ export class StaffService {
 
   context(){
     
-    return fetch('http://127.0.0.1:8000/context/', {
+    return fetch('https://institutemanagement.onrender.com/context/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -52,7 +52,7 @@ export class StaffService {
 
   getAssignments(){
     
-    return fetch(`http://127.0.0.1:8000/assignment/`, {
+    return fetch(`https://institutemanagement.onrender.com/assignment/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -63,7 +63,7 @@ export class StaffService {
 
   delAssignments(id:any){
     
-    return fetch(`http://127.0.0.1:8000/del_assignment/${id}`, {
+    return fetch(`https://institutemanagement.onrender.com/del_assignment/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json',
@@ -74,7 +74,7 @@ export class StaffService {
 
   addAssignment(data:any,batch:string) {
     
-    return fetch(`http://127.0.0.1:8000/assignment/?batch=${batch}`, {
+    return fetch(`https://institutemanagement.onrender.com/assignment/?batch=${batch}`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -86,7 +86,7 @@ export class StaffService {
 
   submittedAssignments(id:any){
     
-    return fetch(`http://127.0.0.1:8000/show_assignment/${id}`, {
+    return fetch(`https://institutemanagement.onrender.com/show_assignment/${id}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -97,7 +97,7 @@ export class StaffService {
 
   approveAssignment(id:any){
     
-    return fetch(`http://127.0.0.1:8000/approve_assignment/${id}`, {
+    return fetch(`https://institutemanagement.onrender.com/approve_assignment/${id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -108,7 +108,7 @@ export class StaffService {
 
   addVideo(formData: FormData,batch:any) {
     
-    return fetch(`http://127.0.0.1:8000/recorded_class/?batch=${batch}`, {
+    return fetch(`https://institutemanagement.onrender.com/recorded_class/?batch=${batch}`, {
       method: 'POST',
       body: formData,
       headers: {
@@ -119,7 +119,7 @@ export class StaffService {
 
   submittedVideos(){
     
-    return fetch(`http://127.0.0.1:8000/recorded_class/`, {
+    return fetch(`https://institutemanagement.onrender.com/recorded_class/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',

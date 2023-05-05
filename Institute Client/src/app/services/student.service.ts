@@ -9,7 +9,7 @@ export class StudentService {
 
   myCourse(){
     
-    return fetch('http://127.0.0.1:8000/my_course/', {
+    return fetch('https://institutemanagement.onrender.com/my_course/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -20,7 +20,7 @@ export class StudentService {
 
   studentIndex(){
     
-    return fetch('http://127.0.0.1:8000/student_index/', {
+    return fetch('https://institutemanagement.onrender.com/student_index/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -31,7 +31,7 @@ export class StudentService {
 
  myBatchStudent(){
     
-    return fetch('http://127.0.0.1:8000/my_batch/', {
+    return fetch('https://institutemanagement.onrender.com/my_batch/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -42,7 +42,7 @@ export class StudentService {
 
   addProfile(formData: FormData) {
     
-    return fetch('http://127.0.0.1:8000/student_index/', {
+    return fetch('https://institutemanagement.onrender.com/student_index/', {
       method: 'PUT',
       body: formData,
       headers: {
@@ -53,7 +53,7 @@ export class StudentService {
 
   context(){
     
-    return fetch('http://127.0.0.1:8000/context/', {
+    return fetch('https://institutemanagement.onrender.com/context/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -63,7 +63,7 @@ export class StudentService {
 
   getAssignment(){
     
-    return fetch(`http://127.0.0.1:8000/get_assignment/`, {
+    return fetch(`https://institutemanagement.onrender.com/get_assignment/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -74,7 +74,7 @@ export class StudentService {
 
   submitAssignment(formData: FormData,id:any) {
     let user = localStorage.getItem('user')
-    return fetch(`http://127.0.0.1:8000/submit_assignment/${id}/?username=${user}`, {
+    return fetch(`https://institutemanagement.onrender.com/submit_assignment/${id}/?username=${user}`, {
       method: 'POST',
       body: formData,
       headers: {
@@ -87,7 +87,7 @@ export class StudentService {
 
     let username = localStorage.getItem('user')
     
-    return fetch(`http://127.0.0.1:8000/assignment_announcement/?username=${username}`, {
+    return fetch(`https://institutemanagement.onrender.com/assignment_announcement/?username=${username}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -100,7 +100,7 @@ export class StudentService {
 
     let username = localStorage.getItem('user')
     
-    return fetch(`http://127.0.0.1:8000/view_announcement/?username=${username}`, {
+    return fetch(`https://institutemanagement.onrender.com/view_announcement/?username=${username}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -111,7 +111,7 @@ export class StudentService {
 
   submittedVideos(){
     
-    return fetch(`http://127.0.0.1:8000/recorded_class/`, {
+    return fetch(`https://institutemanagement.onrender.com/recorded_class/`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -123,7 +123,7 @@ export class StudentService {
 
   // myAssignmentStatus(){
   //   let user = localStorage.getItem('user')
-  //   return fetch(`http://127.0.0.1:8000/my_assignment/?username=${user}`, {
+  //   return fetch(`https://institutemanagement.onrender.com/my_assignment/?username=${user}`, {
   //     method: 'GET',
   //     headers: {
   //       'Content-type': 'application/json',

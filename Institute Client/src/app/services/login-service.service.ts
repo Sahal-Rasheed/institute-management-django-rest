@@ -11,7 +11,7 @@ export class LoginServiceService {
 
   getToken(data:any){
     
-    return fetch('http://127.0.0.1:8000/user_login/', {
+    return fetch('https://institutemanagement.onrender.com/user_login/', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
