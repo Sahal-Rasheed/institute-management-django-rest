@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 538px) {
     table {
         font-size: 10px;
@@ -5,3 +6,30 @@
     }   
     
 }
+
+@media screen and (max-width: 450px) {
+    table {
+        font-size: 7px;
+        padding: 0;
+    }   
+    
+}
+
+@media screen and (max-width: 370px) {
+    table {
+        font-size: 6px;
+        padding: 0;
+    }   
+    
+}
+
+
+@media screen and (max-width: 305px) {
+    table {
+        font-size: 4px;
+        padding: 0;
+    }   
+    
+}
+
+
