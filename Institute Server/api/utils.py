@@ -4,7 +4,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 from . models import CustomUser
 
 def get_user(request):
-    auth_header = request.META.get('HTTP_AUTHORIZATION')
+    auth_header = request.META.get('HTTP_X_AUTHORIZATION')
     if auth_header is None:
         raise AuthenticationFailed('Authorization header missing')
 
