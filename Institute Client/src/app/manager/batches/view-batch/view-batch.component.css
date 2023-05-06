@@ -3,7 +3,11 @@
     table {
         font-size: 10px;
         padding: 0;
-    }   
+    }  
+    .img {
+        max-width: 50%;
+        height: auto;
+      } 
     
 }
 
@@ -12,14 +16,30 @@
         font-size: 7px;
         padding: 0;
     }   
+    .img {
+        max-width: 50%;
+        height: auto;
+    }
     
 }
+
+@media (max-width: 406px) {
+    .img {
+      max-width: 50%;
+      height: auto;
+    }
+  }
+    
 
 @media screen and (max-width: 370px) {
     table {
         font-size: 6px;
         padding: 0;
     }   
+    .img {
+        max-width: 50%;
+        height: auto;
+      }
     
 }
 
@@ -27,7 +47,11 @@
     table {
         font-size: 4px;
         padding: 0;
-    }   
+    } 
+    .img {
+        max-width: 50%;
+        height: auto;
+      }  
     
 }
 

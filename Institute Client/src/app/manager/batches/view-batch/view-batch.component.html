@@ -26,8 +26,8 @@
                         <tbody>
                         <tr *ngFor="let student of students;let num = index" class="text-center" style="background-color:aliceblue;">
                             <th scope="row" class="pt-3" style="width: 200px;">{{num+1}}</th>
-                            <td *ngIf="!student.profile_pic" style="width: 200px;"><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="rounded-circle ml-2" height="20%" width="20%"></td>
-                            <td *ngIf="student.profile_pic" ><img src="{{ student.profile_pic }}" class="rounded-circle ml-2" height="20%" width="20%"></td>
+                            <td *ngIf="!student.profile_pic" style="width: 200px;"><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="rounded-circle ml-2 img" height="20%" width="20%"></td>
+                            <td *ngIf="student.profile_pic" ><img src="{{ student.profile_pic }}" class="rounded-circle ml-2 img" height="20%" width="20%"></td>
                             <td class="pt-3 pl-4">{{student.user}}</td> 
                             <td class="pt-3">{{student.qualification}}</td>
                             <td class="pt-3">{{student.dob}}</td>
