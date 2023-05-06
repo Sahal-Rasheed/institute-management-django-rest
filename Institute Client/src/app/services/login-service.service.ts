@@ -24,7 +24,7 @@ export class LoginServiceService {
   refreshToken(){
     const refreshToken = localStorage.getItem('refresh');
 
-    return fetch('http://127.0.0.1:8000/api/token/refresh/', {
+    return fetch('https://institutemanagement.onrender.com/api/token/refresh/', {
       method: 'POST',
       body: JSON.stringify({refresh: refreshToken}),
       headers: {
